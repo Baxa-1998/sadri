@@ -1,4 +1,5 @@
-import React from 'react'
+
+import { Button } from '../../ui/Button/Button'
 import './header.scss'
 export const Header = () => {
   return (
@@ -7,9 +8,12 @@ export const Header = () => {
       <ul>
         <li>
           <a href="#collection">Collection</a>
-          <a href="#collection">About Us</a>
+        
         </li>
+        <li>  <a href="#collection">About Us</a></li>
       </ul>
+      <img src="./logo.png" alt="logo" />
+      <Button className={'header__btn'}>Place An Order</Button>
       </div>
     </header>
   )

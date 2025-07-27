@@ -1,0 +1,29 @@
+.model {
+  padding-top: 152px;
+  .model__wrapper {
+    display: flex;
+
+    justify-content: center;
+    gap: 20px;
+    .model__item {
+      &:nth-child(2) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // 2 колонки
+        grid-template-rows: repeat(2, auto); // 2 строки
+        gap: 10px; // отступ между фото (по желанию)
+        width: max-content;
+        border: 1px solid black;
+        img {
+          max-width: 467px;
+          height: 464px;
+          object-fit: cover;
+        }
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 950px;
+      }
+    }
+  }
+}

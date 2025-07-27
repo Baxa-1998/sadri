@@ -1,11 +1,35 @@
 .header{
   height: 100px;
   background: var(--primary-color);
-  border: 1px solid black;
+
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
   .header__wrapper{
-    width: 80%; 
+    display: flex;
+      align-items: center; 
+      justify-content: space-between;
+    width: 75%; 
     height: 100%;
-    border: 1px solid red;
+  
     margin: 0 auto;
+    img{
+      width: 196px;
+      height: 66px;
+    }
+    .header__btn{
+      width: 256px;
+      height: 64px;
+      font-size: 24px;
+      font-weight: 400;
+    }
+    ul{
+      display: flex;
+      gap: 92px;
+      li{
+        a {
+          color: #202020;
+          font-size: 24px;
+        }
+      }
+    }
   }
 }
