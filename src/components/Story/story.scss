@@ -1,0 +1,58 @@
+.story {
+  padding-top: 152px;
+
+  .story__wrapper {
+    padding-left: 240px;
+    padding-top: 33px;
+    display: flex;
+    .story__text {
+      padding-top: 33px;
+      h3 {
+        font-size: 42px;
+        font-weight: 400;
+      }
+      h2 {
+        font-weight: 700;
+        font-size: 48px;
+        margin-top: 28px;
+      }
+      .line {
+        width: 467px;
+        height: 6px;
+        background: black;
+        margin-top: 28px;
+      }
+      p {
+        margin-top: 28px;
+        font-size: 28px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      form {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 92px;
+        input {
+          width: 640px;
+          height: 71px;
+          background: none;
+          border: 2px solid rgba(0, 0, 0, 1);
+          border-radius: 20px;
+          font-size: 32px;
+          padding-left: 32px;
+        }
+        .story__btn {
+          width: 234px;
+          height: 71px;
+          font-size: 32px;
+          font-weight: 400;
+        }
+      }
+    }
+    img {
+      width: fit-content;
+      height: 1200px;
+    }
+  }
+}
