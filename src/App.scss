@@ -1,18 +1,23 @@
-*{
+* {
   padding: 0px;
-  margin: 0px; 
-  text-decoration: none; 
+  margin: 0px;
+  text-decoration: none;
   list-style: none;
 }
-
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('/src/assets/fonts/DancingScript-Regular.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
-  --primary-color: #EFE5DB;
-  --secondary-color: #222222; 
+  --primary-color: #efe5db;
+  --secondary-color: #222222;
   --background: #ffffff;
-  
 }
 
-.wrapper{
+.wrapper {
   width: 100%;
   height: fit-content;
   background: var(--primary-color);
