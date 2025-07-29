@@ -1,5 +1,5 @@
 import './contact.scss';
-
+import { Button } from '../../ui/Button/Button';
 export const Contact = () => {
   return (
     <div className="contact">
@@ -12,11 +12,28 @@ export const Contact = () => {
           for you
         </h4>
         <form action="">
-          <input type="text" placeholder="Name" />
-          <input type="number" placeholder="Phone Number" />
-          <input type="email" placeholder="Mail" />
-          <input type="text" placeholder="Commentary" />
+          <div>
+            <img src="./user.svg" alt="user" />
+            <input type="text" placeholder="Name" />
+          </div>
+          <div>
+            <img src="./phone.svg" alt="user" />
+            <input type="number" placeholder="Phone Number" />
+          </div>
+          <div>
+            <img src="./mail.svg" alt="user" />
+            <input type="email" placeholder="Mail" />
+          </div>
+          <div>
+            <img src="./comment.svg" alt="user" />
+            <textarea type="text" placeholder="Commentary" />
+          </div>
+          <Button className={'contact__btn'}>Send</Button>
         </form>
+        <p className='contact__text'>
+          We will contact you within 24 hours. All requests are processed individually.Your data
+          will not be passed on to third parties.
+        </p>
       </div>
     </div>
   );

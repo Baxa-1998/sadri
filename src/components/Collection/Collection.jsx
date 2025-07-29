@@ -8,20 +8,20 @@ export const Collection = () => {
         <div className="collection__items">
           <div className="collection__item">
             <img src="./collection.png" alt="collection" />
-            <h3>Text Zagolovok</h3>
-            <h2>Text Zagolovok</h2>
+            <h5>Text Zagolovok</h5>
+            <h4>Text Zagolovok</h4>
             <p>50$</p>
           </div>
-           <div className="collection__item">
+          <div className="collection__item">
             <img src="./collection.png" alt="collection" />
-            <h3>Text Zagolovok</h3>
-            <h2>Text Zagolovok</h2>
+            <h5>Text Zagolovok</h5>
+            <h4>Text Zagolovok</h4>
             <p>50$</p>
           </div>
-           <div className="collection__item">
+          <div className="collection__item">
             <img src="./collection.png" alt="collection" />
-            <h3>Text Zagolovok</h3>
-            <h2>Text Zagolovok</h2>
+            <h5>Text Zagolovok</h5>
+            <h4>Text Zagolovok</h4>
             <p>50$</p>
           </div>
         </div>

@@ -1,0 +1,38 @@
+.footer{
+  background: rgba(0, 0, 0, 1);
+  padding-top: 53px;
+  padding-bottom: 66px;
+  .footer__logo{
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+  .footer__socials{
+    display: flex;
+    gap: 80px;
+    width: 50%; 
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    margin: 0 auto;
+    margin-top: 60px;
+    .footer__social-item{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .social__circle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background: white;
+        border-radius: 50%;
+      }
+      a{
+        font-size: 24px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+}
