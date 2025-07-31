@@ -16,5 +16,22 @@ export const Models = () => {
             <img src="./model6.png" alt="model" />
       </div>
     </div>
+    <div className='model__mobile'>
+    <div className='model__mobile-item'>
+    <img className='model__mobile-img' src="./model-mobile.png" alt="model-mobile" />
+    <div>
+    <img src="./model-mobile2.png" alt="model-mobile" />
+    <img src="./model-mobile3.png" alt="model-mobile" />
+    </div>
+    </div>
+      <div className='model__mobile-item'>
+    <img className='model__mobile-img' src="./model-mobile.png" alt="model-mobile" />
+    <div>
+    <img src="./model-mobile2.png" alt="model-mobile" />
+    <img src="./model-mobile3.png" alt="model-mobile" />
+    </div>
+    </div>
+    </div>
+    
   </div>;
 };

@@ -1,5 +1,4 @@
-.hero{
-
+.hero {
   min-height: 1018px;
 
   background: url('./hero.png');
@@ -9,34 +8,97 @@
   object-fit: cover;
   // padding-left: 240px;
   // padding-top: 240px;
-  .hero__wrapper{
+  .hero__wrapper {
     padding-left: 240px;
     padding-top: 240px;
-    h2{
+    h2 {
       font-size: 60px;
       font-weight: 400;
       color: rgba(255, 255, 255, 1);
       font-family: 'Dancing Script', sans-serif;
     }
-    h1{
+    h1 {
       font-weight: 700;
       font-size: 70px;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 1);
       margin-top: 14px;
-
     }
-    h3{
-   font-weight: 400;
+    h3 {
+      font-weight: 400;
       font-size: 32px;
       margin-top: 28px;
       color: rgba(255, 255, 255, 1);
     }
-    .hero__btn{
+    .hero__btn {
       width: 448px;
       height: 71px;
       margin-top: 32px;
       font-size: 32px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero {
+    .hero__wrapper {
+      padding-left: 100px;
+      h1 {
+        font-size: 54px;
+      }
+      h2 {
+        font-size: 40px;
+      }
+      h3 {
+        font-size: 26px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .hero {
+    background: url('./hero-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    .hero__wrapper {
+      padding-top: 0px;
+      padding-left: 0px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+
+  height: 100vh;
+
+    .hero__wrapper {
+      padding-top: 50px;
+           display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+    height: 90vh;
+
+
+      h2 {
+        text-align: center;
+        font-size: 30px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 34px;
+      }
+      h3 {
+        text-align: center;
+        font-size: 20px;
+      }
+      .hero__btn{
+        width: 90%;
+        margin-left: 50%;
+        font-size: 24px;
+        margin-top: auto;
+        transform: translate(-50%);
+      }
     }
   }
 }

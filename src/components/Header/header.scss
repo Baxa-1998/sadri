@@ -32,4 +32,34 @@
       }
     }
   }
+
 }
+  @media screen and (max-width: 1024px){
+    .header{
+     
+  .header__wrapper{
+    width: 90%;
+      ul{
+        display: none;
+      }
+    }
+    }
+  
+
+  }
+   @media screen and (max-width: 768px) {
+    .header{
+      height: 80px;
+      .header__wrapper{
+        img{
+          width: 113px;
+          height: 38px;
+        }
+        .header__btn{
+          width: 184px;
+          height: 42px;
+          font-size: 16px;
+        }
+      }
+    }
+   }

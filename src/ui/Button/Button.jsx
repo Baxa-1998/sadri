@@ -1,7 +1,5 @@
-import './button.scss'
+import './button.scss';
 
-export const Button = ({children, className}) => {
-  return (
-    <div className={`button ${className}`}>{children}</div>
-  )
-}
+export const Button = ({ children, className }) => {
+  return <button className={`button ${className}`}>{children}</button>;
+};

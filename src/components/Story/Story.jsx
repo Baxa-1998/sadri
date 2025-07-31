@@ -4,6 +4,11 @@ import './story.scss';
 export const Story = () => {
   return (
     <div className="story">
+      <div className='text__mobile'>
+         <h3>From Samarkand to New York</h3>
+          <h2>A story embroidered with the threads of two cultures</h2>
+          <div className="line"></div>
+      </div>
       <div className="story__wrapper">
         <div className="story__text">
           <h3>From Samarkand to New York</h3>
@@ -27,8 +32,17 @@ export const Story = () => {
             <Button className={'story__btn'}>Contact Us</Button>
           </form>
         </div>
-        <img src="./story-img.png" alt="story" />
+        <div className='story__img'>
+          
+        </div>
+ 
+       
+      
       </div>
+         <form className='mobile-form' action="">
+            <input type="number" placeholder="+1 000 000 00 00" required />
+            <Button className={'story__btn'}>Contact Us</Button>
+          </form>
     </div>
   );
 };

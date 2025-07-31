@@ -12,7 +12,7 @@
         grid-template-rows: repeat(2, auto); // 2 строки
         gap: 10px; // отступ между фото (по желанию)
         width: max-content;
-        border: 1px solid black;
+
         img {
           max-width: 467px;
           height: 464px;
@@ -24,6 +24,52 @@
         object-fit: cover;
         height: 950px;
       }
+    }
+  }
+  .model__mobile {
+    display: none;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    .model__mobile-item {
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      // justify-content: center;
+      gap: 20px;
+      &:nth-child(2) {
+        margin-top: 20px;
+        flex-direction: row-reverse;
+      }
+      .model__mobile-img {
+        width: 170px;
+        height: 390px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        justify-content: space-between;
+        img {
+          width: 100%;
+          max-width: 170px;
+          height: 185px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .model {
+    padding-top: 15px;
+    .model__wrapper {
+      display: none;
+    }
+    .model__mobile {
+      display: block;
     }
   }
 }
