@@ -85,3 +85,25 @@
     }
   }
 }
+@media screen and (max-width: 900px){
+  .contact{
+    .contact__wrapper{
+      width: 90%;
+      h2{
+        font-size: 32px;
+      }
+      h3{
+        font-size: 35px;
+      }
+      h4{
+        font-size: 20px;
+      }
+      form{
+        margin-top: 20px;
+      }
+      .contact__text{
+        font-size: 26px;
+      }
+    }
+  }
+}

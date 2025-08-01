@@ -1,6 +1,28 @@
 import './contact.scss';
 import { Button } from '../../ui/Button/Button';
+import { useState } from 'react';
 export const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    comment: '',
+  });
+
+  const BOT_TOKEN = '8314598166:AAEXDbUCa3peaZeKh9IfL9qlR_o9fZ1V3eo'
+  const CHAT_ID = '563246689'
+  const TELEGRAM_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e) =>{
+    e.preventDefault()
+  }
   return (
     <div className="contact">
       <div className="contact__wrapper">
@@ -14,23 +36,33 @@ export const Contact = () => {
         <form action="">
           <div>
             <img src="./user.svg" alt="user" />
-            <input type="text" placeholder="Name" />
+            <input onChange={handleChange} value={formData.name} type="text" placeholder="Name" />
           </div>
           <div>
             <img src="./phone.svg" alt="user" />
-            <input type="number" placeholder="Phone Number" />
+            <input
+              onChange={handleChange}
+              value={formData.phone}
+              type="number"
+              placeholder="Phone Number"
+            />
           </div>
           <div>
             <img src="./mail.svg" alt="user" />
-            <input type="email" placeholder="Mail" />
+            <input onChange={handleChange} value={formData.email} type="email" placeholder="Mail" />
           </div>
           <div>
             <img src="./comment.svg" alt="user" />
-            <textarea type="text" placeholder="Commentary" />
+            <textarea
+              onChange={handleChange}
+              value={formData.comment}
+              type="text"
+              placeholder="Commentary"
+            />
           </div>
           <Button className={'contact__btn'}>Send</Button>
         </form>
-        <p className='contact__text'>
+        <p className="contact__text">
           We will contact you within 24 hours. All requests are processed individually.Your data
           will not be passed on to third parties.
         </p>
