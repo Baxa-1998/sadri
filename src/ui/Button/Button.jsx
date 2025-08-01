@@ -1,5 +1,9 @@
 import './button.scss';
 
-export const Button = ({ children, className }) => {
-  return <button className={`button ${className}`}>{children}</button>;
+export const Button = ({ children, className, ...props }) => {
+  return (
+    <button className={`button ${className}`} {...props}>
+      {children}
+    </button>
+  );
 };

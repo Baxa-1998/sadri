@@ -9,7 +9,7 @@ export const Story = () => {
           <h2>A story embroidered with the threads of two cultures</h2>
           <div className="line"></div>
       </div>
-      <div className="story__wrapper">
+      <div data-aos="fade-up" className="story__wrapper">
         <div className="story__text">
           <h3>From Samarkand to New York</h3>
           <h2>A story embroidered with the threads of two cultures</h2>

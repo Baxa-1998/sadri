@@ -3,8 +3,8 @@
   padding-top: 53px;
   padding-bottom: 66px;
   .footer__logo{
-    margin-left: 50%;
-    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
   }
   .footer__socials{
     display: flex;
@@ -34,5 +34,21 @@
         color: rgba(255, 255, 255, 1);
       }
     }
+  }
+}
+@media screen and (max-width: 540px){
+  .footer{
+    .footer__logo{
+      img{
+        width: 253px;
+        height: 83px;
+        
+      }
+
+    }
+    .footer__socials{
+      gap: 32px;
+    }
+   
   }
 }

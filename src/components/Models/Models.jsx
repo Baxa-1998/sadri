@@ -2,7 +2,7 @@ import './models.scss';
 
 export const Models = () => {
   return <div className="model">
-    <div className='model__wrapper'>
+    <div  className='model__wrapper'>
     <div className='model__item'>
         <img src="./model.png" alt="model" />
       </div> 

@@ -2,7 +2,10 @@ import './footer.scss'
 export const Footer = () => {
   return (
     <footer className='footer'>
-      <img className='footer__logo' src="./footer-logo.svg" alt="logo" /> 
+      <div className='footer__logo'>
+      <img  src="./footer-logo.svg" alt="logo" /> 
+      </div>
+
       <div className='footer__socials'>
         <div className='footer__social-item'>
           <div className='social__circle'>
