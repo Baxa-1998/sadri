@@ -30,7 +30,7 @@ export const Collection = () => {
           <img src={images[hoveredIndex]} alt="zoomed" className="overlay__image" />
         </div>
       )}
-      <div className="collection">
+      <div id='collection' data-aos="fade-up" className="collection">
         <div className="collection__wrapper">
           <h3>From Samarkand to New York</h3>
           <h2>from the new collection</h2>

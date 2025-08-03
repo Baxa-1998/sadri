@@ -3,7 +3,7 @@ import './story.scss';
 
 export const Story = () => {
   return (
-    <div className="story">
+    <div id='about' className="story">
       <div className='text__mobile'>
          <h3>From Samarkand to New York</h3>
           <h2>A story embroidered with the threads of two cultures</h2>

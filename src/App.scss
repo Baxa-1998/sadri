@@ -6,6 +6,9 @@
   box-sizing: border-box;
  
 }
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: 'Dancing Script';
   src: url('/src/assets/fonts/DancingScript-Regular.ttf') format('woff2');

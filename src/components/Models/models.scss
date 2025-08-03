@@ -2,7 +2,7 @@
   padding-top: 152px;
   .model__wrapper {
     display: flex;
-
+    overflow: hidden;
     justify-content: center;
     gap: 20px;
     .model__item {
