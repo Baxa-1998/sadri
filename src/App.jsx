@@ -7,17 +7,25 @@ import { Header } from './components/Header/Header';
 import { Hero } from './components/Hero/Hero';
 import { Models } from './components/Models/Models';
 import { Story } from './components/Story/Story';
-import AOS from "aos";
-import "aos/dist/aos.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { getGoodAPI } from './features/goods/thunk';
+import { push, ref } from 'firebase/database';
+import { db } from '../firebase';
+import { Route, Routes } from 'react-router-dom';
+import Admin from './components/Admin/Admin';
 
-function App() {
+function HomePage() {
+  const data = useSelector((state) => state.goods.data);
+  const newArray = Object.values(data);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     AOS.init();
-  });
-
-  useEffect(() => {
-    AOS.refresh();
+    dispatch(getGoodAPI());
   }, []);
+
   return (
     <div className="wrapper">
       <Header />
@@ -28,6 +36,15 @@ function App() {
       <Contact />
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/admin" element={<Admin />} />
+    </Routes>
   );
 }
 

@@ -12,6 +12,9 @@ export const Header = () => {
             {' '}
             <a href="#about">About Us</a>
           </li>
+           <li>
+            <a href="#collection">Admin</a>
+          </li>
         </ul>
         <a href="/">
    <img src="./logo.png" alt="logo" />
