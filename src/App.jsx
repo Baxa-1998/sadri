@@ -15,6 +15,7 @@ import { push, ref } from 'firebase/database';
 import { db } from '../firebase';
 import { Route, Routes } from 'react-router-dom';
 import Admin from './components/Admin/Admin';
+import Authorization from './components/Authorization/Authorization';
 
 function HomePage() {
   const data = useSelector((state) => state.goods.data);
@@ -43,7 +44,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/admin" element={<Admin />} />
+      <Route path="/auth" element={<Authorization />} />
+      <Route path="/auth/admin" element={<Admin />} />
     </Routes>
   );
 }

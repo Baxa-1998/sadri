@@ -1,15 +1,16 @@
-import React, { useContext, useEffect } from 'react';
-import styles from './Authorization.module.scss';
+import React from 'react';
 
-import { AuthCTX } from '../../contexts/Auth';
+
+
 import { useNavigate } from 'react-router-dom';
-
+import './authorization.scss'
+import { Button } from '../../ui/Button/Button';
 export default function Authorization() {
   const [login, setLogin] = React.useState('');
   const [password, setPassword] = React.useState('');
   const navigate = useNavigate();
-  const {isAuth, setIsAuth} = useContext(AuthCTX)
-  console.log(isAuth);
+  const [isAuth, setIsAuth] = React.useState(false)
+
 
   // const onSubmit = (e) => {
   //   const formData = new FormData(e.target);
@@ -21,8 +22,8 @@ export default function Authorization() {
     if (login === '' || password === '') {
       alert('Заполните логин и пароль');
       
-    }else if (login == '998910130013' && password == 'oxmetal2024') {
-        navigate('/admin/control');
+    }else if (login == 'sadri' && password == 'qwerty123') {
+        navigate('/auth/admin');
         setIsAuth(true)
 
     }else{
@@ -34,29 +35,30 @@ export default function Authorization() {
 
 
   return (
-    <section className="w-full h-[100vh] flex items-center justify-center">
-      <div className={styles.authorization}>
-        <h1 className="text-center text-[40px] font-semibold">Авторизация</h1>
+    <section className='authorization' >
+      <div className='authorization__wrapper'>
+        <h1>Log In</h1>
         <form action="">
           <input
             type="text"
             onChange={(e) => setLogin(e.target.value)}
-            placeholder="Логин"
+            placeholder="Login"
             required
             value={login}
           />
           <input
             type="text"
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Пароль"
+            placeholder="Password"
             required
             value={password}
           />
 
           <div
+          style={{display: "flex", justifyContent: "center"}}
             onClick={isValidaton}
-            className="button ml-[50%] translate-x-[-50%] w-[150px] h-[70px] flex items-center justify-center">
-            <button>Войти</button>
+          >
+            <Button className={'authorization__btn'}>LOGIN</Button>
           </div>
         </form>
       </div>

@@ -1,0 +1,43 @@
+.authorization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  height: 100vh;
+  .authorization__wrapper {
+    width: 30%;
+    height: fit-content;
+
+    h1 {
+      text-align: center;
+      font-weight: bold;
+      color: rgb(94, 60, 50);
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 48px;
+      margin-top: 28px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      input {
+        width: 100%;
+        height: 80px;
+        background: none;
+        border: 2px solid rgba(0, 0, 0, 1);
+        border-radius: 20px;
+        padding-top: 10px;
+        font-size: 24px;
+        box-sizing: border-box; /* 🔑 Важное свойство */
+        padding-left: 30px;
+      }
+      .authorization__btn {
+        width: 245px;
+        height: 70px;
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
+  }
+}
