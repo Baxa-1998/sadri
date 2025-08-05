@@ -3,11 +3,11 @@ import './story.scss';
 
 export const Story = () => {
   return (
-    <div id='about' className="story">
-      <div className='text__mobile'>
-         <h3>From Samarkand to New York</h3>
-          <h2>A story embroidered with the threads of two cultures</h2>
-          <div className="line"></div>
+    <div id="about" className="story">
+      <div className="text__mobile">
+        <h3>From Samarkand to New York</h3>
+        <h2>A story embroidered with the threads of two cultures</h2>
+        <div className="line"></div>
       </div>
       <div data-aos="fade-up" className="story__wrapper">
         <div className="story__text">
@@ -27,22 +27,26 @@ export const Story = () => {
             moments to bespoke pieces, Sadri Couture <br /> is not just fashion—it’s a movement that
             honors <br /> heritage, empowers women, and turns tradition into <br /> art.
           </p>
-          <form action="">
-            <input type="number" placeholder="+1 000 000 00 00" required />
-            <Button className={'story__btn'}>Contact Us</Button>
+          <form action=""
+          onSubmit={(e) => e.preventDefault()}
+          >
+            <input type="number" />
+            <a href="#contact">
+   <Button type="button" className={'story__btn'}>Contact Us</Button>
+            </a>
+         
           </form>
         </div>
-        <div className='story__img'>
-          
-        </div>
- 
-       
-      
+        <div className="story__img"></div>
       </div>
-         <form className='mobile-form' action="">
-            <input type="number" placeholder="+1 000 000 00 00" required />
-            <Button className={'story__btn'}>Contact Us</Button>
-          </form>
+      <form className="mobile-form">
+        <input type="number" />
+       <a href="">
+      <Button className={'story__btn'}>Contact Us</Button>
+       </a>
+    
+      
+      </form>
     </div>
   );
 };

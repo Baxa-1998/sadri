@@ -12,9 +12,9 @@ export const Header = () => {
             {' '}
             <a href="#about">About Us</a>
           </li>
-           <li>
+           {/* <li>
             <a href="#collection">Admin</a>
-          </li>
+          </li> */}
         </ul>
         <a href="/">
    <img src="./logo.png" alt="logo" />

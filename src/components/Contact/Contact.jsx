@@ -51,7 +51,7 @@ export const Contact = () => {
 
  
   return (
-    <div className="contact">
+    <div id='contact' className="contact">
       <div className="contact__wrapper">
         <h3>Create your own unique look</h3>
         <h2>Contact Us</h2>
