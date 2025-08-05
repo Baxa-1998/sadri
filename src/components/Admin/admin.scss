@@ -1,0 +1,24 @@
+.admin{
+  background: var(--primary-color);
+  .admin__header{ 
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+      width: 196px;
+      height: 66px;
+      &:nth-child(2){
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        &:hover{
+          opacity: 80%;
+        }
+      }
+    }
+    
+  }
+}

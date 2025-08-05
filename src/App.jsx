@@ -21,7 +21,7 @@ function HomePage() {
   const data = useSelector((state) => state.goods.data);
   const newArray = Object.values(data);
   const dispatch = useDispatch();
-
+console.log(data);
   useEffect(() => {
     AOS.init();
     dispatch(getGoodAPI());
