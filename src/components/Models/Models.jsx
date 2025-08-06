@@ -1,11 +1,36 @@
+import { useEffect, useState } from 'react';
 import './models.scss';
 
-export const Models = () => {
+export const Models = ({ isInViewRef }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.3, // настрой: 0.3 = 30% блока видно
+      },
+    );
+
+    if (isInViewRef.current) {
+      observer.observe(isInViewRef.current);
+    }
+
+    return () => {
+      if (isInViewRef.current) {
+        observer.unobserve(isInViewRef.current);
+      }
+    };
+  }, [isInViewRef]);
   return (
     <div className="model">
-      <div className="model__wrapper">
+      <div className={`model__wrapper ${isVisible ? '' : 'hidden-overflow'}`}>
         <div data-aos="zoom-out" className="model__item">
-          <img src="./model.png" alt="model" />
+          <div>
+            <img src="./model.png" alt="model" />
+          </div>
         </div>
         <div data-aos="zoom-out" className="model__item">
           <div>

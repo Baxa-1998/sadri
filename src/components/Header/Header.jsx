@@ -20,7 +20,10 @@ export const Header = () => {
    <img src="./logo.png" alt="logo" />
         </a>
      
-        <Button className={'header__btn'}>Place An Order</Button>
+     <a href="#contact">
+<Button className={'header__btn'}>Place An Order</Button>
+     </a>
+        
       </div>
     </header>
   );

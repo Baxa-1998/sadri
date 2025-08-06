@@ -27,25 +27,22 @@ export const Story = () => {
             moments to bespoke pieces, Sadri Couture <br /> is not just fashion—it’s a movement that
             honors <br /> heritage, empowers women, and turns tradition into <br /> art.
           </p>
-          <form action=""
-          onSubmit={(e) => e.preventDefault()}
-          >
-            <input type="number" />
+          <form action="" onSubmit={(e) => e.preventDefault()}>
+            {/* <input type="number" /> */}
             <a href="#contact">
-   <Button type="button" className={'story__btn'}>Contact Us</Button>
+              <Button type="button" className={'story__btn'}>
+                Contact Us
+              </Button>
             </a>
-         
           </form>
         </div>
         <div className="story__img"></div>
       </div>
-      <form className="mobile-form">
-        <input type="number" />
-       <a href="">
-      <Button className={'story__btn'}>Contact Us</Button>
-       </a>
-    
-      
+      <form className="mobile-form" onSubmit={(e) => e.preventDefault()}>
+        {/* <input type="number" /> */}
+        <a href="#contact">
+          <Button className={'story__btn'}>Contact Us</Button>
+        </a>
       </form>
     </div>
   );

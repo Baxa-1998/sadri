@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import './App.scss';
 import { Collection } from './components/Collection/Collection';
 import { Contact } from './components/Contact/Contact';
@@ -11,8 +11,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getGoodAPI } from './features/goods/thunk';
-import { push, ref } from 'firebase/database';
-import { db } from '../firebase';
+
+
 import { Route, Routes } from 'react-router-dom';
 import Admin from './components/Admin/Admin';
 import Authorization from './components/Authorization/Authorization';
@@ -20,6 +20,7 @@ import Authorization from './components/Authorization/Authorization';
 function HomePage() {
   const data = useSelector((state) => state.goods.data);
   const newArray = Object.values(data);
+    const modelsRef = useRef(null);
   const dispatch = useDispatch();
 console.log(data);
   useEffect(() => {
@@ -31,7 +32,10 @@ console.log(data);
     <div className="wrapper">
       <Header />
       <Hero />
-      <Models />
+      
+   <div ref={modelsRef}>
+        <Models isInViewRef={modelsRef} />
+      </div>
       <Story />
       <Collection />
       <Contact />
