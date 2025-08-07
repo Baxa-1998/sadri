@@ -12,7 +12,6 @@ import 'aos/dist/aos.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getGoodAPI } from './features/goods/thunk';
 
-
 import { Route, Routes } from 'react-router-dom';
 import Admin from './components/Admin/Admin';
 import Authorization from './components/Authorization/Authorization';
@@ -20,9 +19,9 @@ import Authorization from './components/Authorization/Authorization';
 function HomePage() {
   const data = useSelector((state) => state.goods.data);
   const newArray = Object.values(data);
-    const modelsRef = useRef(null);
+  const modelsRef = useRef(null);
   const dispatch = useDispatch();
-console.log(data);
+
   useEffect(() => {
     AOS.init();
     dispatch(getGoodAPI());
@@ -32,8 +31,8 @@ console.log(data);
     <div className="wrapper">
       <Header />
       <Hero />
-      
-   <div ref={modelsRef}>
+
+      <div ref={modelsRef}>
         <Models isInViewRef={modelsRef} />
       </div>
       <Story />

@@ -1,22 +1,67 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7); // тёмный фон
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  cursor: zoom-out;
 
-  .overlay__image {
-    max-width: 80%;
-    max-height: 80%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-    transform: scale(1.2); // увеличение
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    border: 5px solid rgba(255, 255, 255, 1);
+  &__content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    animation: zoomIn 0.3s ease-in-out;
+    cursor: default;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 200px;
+      height: auto;
+      margin: 10px;
+      object-fit: cover;
+      transition: all 300ms;
+    }
+
+    h4 {
+      font-size: 34px;
+      margin-top: 20px;
+    }
+
+    h5 {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 26px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
   }
 }
+
+// Анимация увеличения
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .collection {
   padding-top: 83px;
   .collection__wrapper {
@@ -41,38 +86,93 @@
       justify-content: space-between;
       align-items: center;
       margin-top: 40px;
+      width: 100%;
+      overflow-x: scroll;
+      margin: 0 auto;
+      margin-top: 54px;
+      gap: 30px;
+        &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
       .collection__item {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        width: 30%;
-        transition: 300 all;
+
+        width: 100%;
+        transition: all 300ms;
         position: relative;
-        img {
-          width: 90%;
-          height: 560px;
-          transition: 300ms all;
-          cursor: pointer;
+
+        // обёртка для 3 изображений
+        .collection__images {
+          display: flex;
+          gap: 10px;
+
+          // блок с основной (первой) картинкой
+          &-main {
+            width: 100%;
+            img {
+              max-width: 361px;
+              height: 510px;
+              object-fit: cover;
+              border-radius: 8px;
+              transition: all 0.3s ease;
+            }
+          }
+
+          // блок с двумя картинками
+          &-secondary {
+              width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            img {
+              max-width: 192px;
+              height: 288px;
+              object-fit: cover;
+              border-radius: 8px;
+              transition: all 0.3s ease;
+              &:nth-child(2) {
+                height: 206px;
+              }
+            }
+          }
         }
 
         h4 {
-          text-align: center;
           font-size: 34px;
           font-weight: 400;
           margin-top: 16px;
         }
+
         h5 {
           font-size: 24px;
           color: rgba(34, 34, 34, 1);
           font-weight: 400;
           margin-top: 32px;
         }
+
         p {
           color: rgba(34, 34, 34, 1);
           font-weight: bold;
-          font-size: 26px;
+          font-weight: 400;
+          font-size: 24px;
           margin-top: 16px;
+          margin-bottom: 25px;
         }
       }
     }
