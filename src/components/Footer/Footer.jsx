@@ -11,7 +11,7 @@ export const Footer = () => {
           <div className='social__circle'>
             <img src="./instagram.svg" alt="" />
             </div> 
-          <a href="#instagram">Username</a>
+          <a href="https://www.instagram.com/sadricouture/?igsh=MW5sOTI3aGViMHBtcQ%3D%3D&utm_source=qr#">Sadri</a>
         </div>
          <div className='footer__social-item'>
           <div className='social__circle'>
@@ -27,15 +27,15 @@ export const Footer = () => {
         </div>
             <div className='footer__social-item'>
           <div className='social__circle'>
-            <img src="./phone.svg" alt="" />
+            <img src="./phone.svg" alt="phone" />
             </div> 
-          <a href="#facebook">Username</a>
+          <a href="tel:+1(347)-981-1240 ">Username</a>
         </div>
                <div className='footer__social-item'>
           <div className='social__circle'>
             <img src="./message.svg" alt="" />
             </div> 
-          <a href="#facebook">Username</a>
+          <a href="mailto:sadricouture@gmail.com">sadricouture@gmail.com</a>
         </div>
 
       </div>

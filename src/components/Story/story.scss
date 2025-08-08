@@ -16,6 +16,9 @@
         font-weight: 700;
         font-size: 48px;
         margin-top: 28px;
+         font-family: 'Cinzel', sans-serif;
+       font-weight: 700;
+       color: rgba(94, 60, 50, 1);
       }
       .line {
         width: 467px;
@@ -25,9 +28,12 @@
       }
       p {
         margin-top: 28px;
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 400;
         text-transform: uppercase;
+              font-family: 'Cinzel', sans-serif;
+       font-weight: 700;
+       color: rgba(94, 60, 50, 1);
       }
       form {
         display: flex;
@@ -106,6 +112,9 @@
       .story__text {
         p {
           font-size: 20px;
+                font-family: 'Cinzel', sans-serif;
+       font-weight: 400;
+       color: rgba(94, 60, 50, 1);
         }
       }
       .story__img {
@@ -129,6 +138,9 @@
       font-weight: 700;
       font-size: 48px;
       margin-top: 28px;
+            font-family: 'Cinzel', sans-serif;
+       font-weight: 700;
+       color: rgba(94, 60, 50, 1);
     }
     .line {
       width: 467px;
@@ -199,9 +211,13 @@
       padding-left: 20px;
       padding-top: 0px;
       .story__text {
+        width: 90%;
         padding-top: 0px;
         p{
           font-size: 14px;
+          br{
+            display: none;
+          }
         }
         h3 {
           display: none;
